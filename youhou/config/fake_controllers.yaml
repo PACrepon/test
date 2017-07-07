@@ -1,0 +1,5 @@
+controller_list:
+  - name: fake_mover_controller
+    joints:
+      - front_left_wheel_joint
+      - front_right_wheel_joint

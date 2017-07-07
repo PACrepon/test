@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test_bot">
+
+	<xacro:property name = "main_body_radius" value = "0.2"/>
+	<xacro:property name = "main_body_length" value = "0.02"/>
+	<xacro:property name = "main_body_mass" value = "1"/>
+	<xacro:property name = "wheel_radius" value = "0.05"/>
+	<xacro:property name = "wheel_length" value = "0.01"/>
+	<xacro:property name = "wheel_mass" value = "0.2"/>
+
+	<xacro:property name = "pie" value = "3.14159265359"/>
+	<xacro:property name = "deg_to_rad" value = "${pie/180.}"/>
+
+	<macro name="cylinder_inertia" params="m r h">
+		<inertial>
+			<mass value = "${m}"/>
+			<inertia ixx ="${m*(3*r*r+h*h)/12}" ixy = "0" ixz = "0" iyy = "${m*(3*r*r+h*h)/12}" iyz = "0" izz = "${m*r*r/2}" />
+		</inertial>
+	</macro>
+
+	<xacro:macro name = "wheel" params="name radius length">
+		<link name = "${name}">
+			<visual>
+				<geometry>
+					<cylinder length = "${length}" radius = "${radius}"/>
+				</geometry>
+				<origin rpy = "0 ${pie/2} 0"/>
+				<material name = "green">
+					<color rgba = "0 1 0 1"/>
+				</material>
+			</visual>
+			<collision>
+				<geometry>
+					<cylinder length = "${length}" radius = "${radius}"/>
+				</geometry>
+				<origin rpy = "0 ${pie/2} 0"/>
+			</collision>
+			<xacro:cylinder_inertia m = "${wheel_mass}" r = "${wheel_radius}" h = "${wheel_length}"/>
+		</link>
+
+		<gazebo reference = "${name}">
+			<material>Gazebo/Red</material>
+		</gazebo>
+	</xacro:macro>
+
+	<xacro:macro name="transmission_block" params="joint_name">
+		<transmission name="${'tran_'+joint_name}">
+			<type>transmission_interface/SimpleTransmission</type>
+			<joint name="${joint_name}">
+				<hardwareInterface>PositionJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="${'motor_'+joint_name}">
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+		</transmission>
+	</xacro:macro>
+
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/test</robotNamespace>
+		</plugin>
+	</gazebo>
+	
+	<link name = "base_link">
+		<visual>
+			<geometry>
+				<cylinder radius = "${main_body_radius}" length = "${main_body_length}"/>
+			</geometry>
+			<origin rpy = "0 0 0" xyz="0 0 0"/>
+			<material name = "red">
+				<color rgba = "1 0 0 1"/>
+			</material>
+		</visual>
+		<collision>
+			<geometry>
+				<cylinder radius = "${main_body_radius}"  length = "${main_body_length}"/>
+			</geometry>
+			<origin rpy = "0 0 0"/>
+		</collision>
+		<xacro:cylinder_inertia m = "${main_body_mass}" r = "${main_body_radius}" h = "${main_body_length}"/>
+	</link>
+
+	<xacro:wheel name = "right_wheel" length = "${wheel_length}" radius = "${wheel_radius}"/>
+	<xacro:wheel name = "left_wheel" length = "${wheel_length}" radius = "${wheel_radius}"/>
+
+	
+
+	<joint name="left_joint" type="revolute">
+	    <parent link="base_link"/>
+	    <child link="left_wheel"/>
+	    <origin xyz="${main_body_radius + wheel_length/2} 0 0"/>
+	    <axis xyz="1 0 0" />
+	    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+	    <dynamics damping="50" friction="1"/>
+	</joint>
+	<xacro:transmission_block joint_name = "left_joint"/>
+	
+
+	<joint name="right_joint" type="revolute">
+	    <parent link="base_link"/>
+	    <child link="right_wheel"/>
+	    <origin xyz="${-(main_body_radius + wheel_length/2)} 0 0"/>
+	    <axis xyz="-1 0 0" />
+	    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+	    <dynamics damping="50" friction="1"/>
+	</joint>
+	<xacro:transmission_block joint_name = "right_joint"/>
+
+
+
+	
+	
+</robot>

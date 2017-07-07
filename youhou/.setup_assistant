@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: mastering_ros_robot_description_pkg
+    relative_path: urdf/diff_wheeled_robot.xacro
+  SRDF:
+    relative_path: config/differential_wheeled_robot.srdf
+  CONFIG:
+    author_name: youhou
+    author_email: youhou@yolo.com
+    generated_timestamp: 1499343945
