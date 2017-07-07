@@ -1,0 +1,305 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"master_bot_straw" [label="master_bot_straw"];
+"master_top_straw" [label="master_top_straw"];
+"no10_bot_straw" [label="no10_bot_straw"];
+"no10_top_straw" [label="no10_top_straw"];
+"no11_bot_straw" [label="no11_bot_straw"];
+"no11_top_straw" [label="no11_top_straw"];
+"no12_bot_straw" [label="no12_bot_straw"];
+"no12_top_straw" [label="no12_top_straw"];
+"no13_bot_straw" [label="no13_bot_straw"];
+"no13_top_straw" [label="no13_top_straw"];
+"no14_bot_straw" [label="no14_bot_straw"];
+"no14_top_straw" [label="no14_top_straw"];
+"no15_bot_straw" [label="no15_bot_straw"];
+"no15_top_straw" [label="no15_top_straw"];
+"no16_bot_straw" [label="no16_bot_straw"];
+"no16_top_straw" [label="no16_top_straw"];
+"no17_bot_straw" [label="no17_bot_straw"];
+"no17_top_straw" [label="no17_top_straw"];
+"no18_bot_straw" [label="no18_bot_straw"];
+"no18_top_straw" [label="no18_top_straw"];
+"no19_bot_straw" [label="no19_bot_straw"];
+"no19_top_straw" [label="no19_top_straw"];
+"no1_bot_straw" [label="no1_bot_straw"];
+"no1_top_straw" [label="no1_top_straw"];
+"no20_bot_straw" [label="no20_bot_straw"];
+"no20_top_straw" [label="no20_top_straw"];
+"no21_bot_straw" [label="no21_bot_straw"];
+"no21_top_straw" [label="no21_top_straw"];
+"no22_bot_straw" [label="no22_bot_straw"];
+"no22_top_straw" [label="no22_top_straw"];
+"no23_bot_straw" [label="no23_bot_straw"];
+"no23_top_straw" [label="no23_top_straw"];
+"no24_bot_straw" [label="no24_bot_straw"];
+"no24_top_straw" [label="no24_top_straw"];
+"no25_bot_straw" [label="no25_bot_straw"];
+"no25_top_straw" [label="no25_top_straw"];
+"no26_bot_straw" [label="no26_bot_straw"];
+"no26_top_straw" [label="no26_top_straw"];
+"no27_bot_straw" [label="no27_bot_straw"];
+"no27_top_straw" [label="no27_top_straw"];
+"no28_bot_straw" [label="no28_bot_straw"];
+"no28_top_straw" [label="no28_top_straw"];
+"no29_bot_straw" [label="no29_bot_straw"];
+"no29_top_straw" [label="no29_top_straw"];
+"no2_bot_straw" [label="no2_bot_straw"];
+"no2_top_straw" [label="no2_top_straw"];
+"no30_bot_straw" [label="no30_bot_straw"];
+"no30_top_straw" [label="no30_top_straw"];
+"no31_bot_straw" [label="no31_bot_straw"];
+"no31_top_straw" [label="no31_top_straw"];
+"no32_bot_straw" [label="no32_bot_straw"];
+"no32_top_straw" [label="no32_top_straw"];
+"no33_bot_straw" [label="no33_bot_straw"];
+"no33_top_straw" [label="no33_top_straw"];
+"no34_bot_straw" [label="no34_bot_straw"];
+"no34_top_straw" [label="no34_top_straw"];
+"no35_bot_straw" [label="no35_bot_straw"];
+"no35_top_straw" [label="no35_top_straw"];
+"no36_bot_straw" [label="no36_bot_straw"];
+"no36_top_straw" [label="no36_top_straw"];
+"no37_bot_straw" [label="no37_bot_straw"];
+"no37_top_straw" [label="no37_top_straw"];
+"no38_bot_straw" [label="no38_bot_straw"];
+"no38_top_straw" [label="no38_top_straw"];
+"no39_bot_straw" [label="no39_bot_straw"];
+"no39_top_straw" [label="no39_top_straw"];
+"no3_bot_straw" [label="no3_bot_straw"];
+"no3_top_straw" [label="no3_top_straw"];
+"no40_bot_straw" [label="no40_bot_straw"];
+"no40_top_straw" [label="no40_top_straw"];
+"no41_bot_straw" [label="no41_bot_straw"];
+"no41_top_straw" [label="no41_top_straw"];
+"no42_bot_straw" [label="no42_bot_straw"];
+"no42_top_straw" [label="no42_top_straw"];
+"no43_bot_straw" [label="no43_bot_straw"];
+"no43_top_straw" [label="no43_top_straw"];
+"no44_bot_straw" [label="no44_bot_straw"];
+"no44_top_straw" [label="no44_top_straw"];
+"no45_bot_straw" [label="no45_bot_straw"];
+"no45_top_straw" [label="no45_top_straw"];
+"no46_bot_straw" [label="no46_bot_straw"];
+"no46_top_straw" [label="no46_top_straw"];
+"no47_bot_straw" [label="no47_bot_straw"];
+"no47_top_straw" [label="no47_top_straw"];
+"no48_bot_straw" [label="no48_bot_straw"];
+"no48_top_straw" [label="no48_top_straw"];
+"no49_bot_straw" [label="no49_bot_straw"];
+"no49_top_straw" [label="no49_top_straw"];
+"no4_bot_straw" [label="no4_bot_straw"];
+"no4_top_straw" [label="no4_top_straw"];
+"no5_bot_straw" [label="no5_bot_straw"];
+"no5_top_straw" [label="no5_top_straw"];
+"no6_bot_straw" [label="no6_bot_straw"];
+"no6_top_straw" [label="no6_top_straw"];
+"no7_bot_straw" [label="no7_bot_straw"];
+"no7_top_straw" [label="no7_top_straw"];
+"no8_bot_straw" [label="no8_bot_straw"];
+"no8_top_straw" [label="no8_top_straw"];
+"no9_bot_straw" [label="no9_bot_straw"];
+"no9_top_straw" [label="no9_top_straw"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "master_main_joint" [label="xyz: 0.1 0 0 \nrpy: 0 -0 0"]
+"master_main_joint" -> "master_bot_straw"
+"master_bot_straw" -> "master_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"master_slave_joint" -> "master_top_straw"
+"base_link" -> "no10_main_joint" [label="xyz: 0.0927051 0.285317 0 \nrpy: 0 -0 0"]
+"no10_main_joint" -> "no10_bot_straw"
+"no10_bot_straw" -> "no10_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no10_slave_joint" -> "no10_top_straw"
+"base_link" -> "no11_main_joint" [label="xyz: 0.0562144 0.294686 0 \nrpy: 0 -0 0"]
+"no11_main_joint" -> "no11_bot_straw"
+"no11_bot_straw" -> "no11_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no11_slave_joint" -> "no11_top_straw"
+"base_link" -> "no12_main_joint" [label="xyz: 0.0188372 0.299408 0 \nrpy: 0 -0 0"]
+"no12_main_joint" -> "no12_bot_straw"
+"no12_bot_straw" -> "no12_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no12_slave_joint" -> "no12_top_straw"
+"base_link" -> "no13_main_joint" [label="xyz: -0.0188372 0.299408 0 \nrpy: 0 -0 0"]
+"no13_main_joint" -> "no13_bot_straw"
+"no13_bot_straw" -> "no13_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no13_slave_joint" -> "no13_top_straw"
+"base_link" -> "no14_main_joint" [label="xyz: -0.0562144 0.294686 0 \nrpy: 0 -0 0"]
+"no14_main_joint" -> "no14_bot_straw"
+"no14_bot_straw" -> "no14_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no14_slave_joint" -> "no14_top_straw"
+"base_link" -> "no15_main_joint" [label="xyz: -0.0927051 0.285317 0 \nrpy: 0 -0 0"]
+"no15_main_joint" -> "no15_bot_straw"
+"no15_bot_straw" -> "no15_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no15_slave_joint" -> "no15_top_straw"
+"base_link" -> "no16_main_joint" [label="xyz: -0.127734 0.271448 0 \nrpy: 0 -0 0"]
+"no16_main_joint" -> "no16_bot_straw"
+"no16_bot_straw" -> "no16_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no16_slave_joint" -> "no16_top_straw"
+"base_link" -> "no17_main_joint" [label="xyz: -0.160748 0.253298 0 \nrpy: 0 -0 0"]
+"no17_main_joint" -> "no17_bot_straw"
+"no17_bot_straw" -> "no17_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no17_slave_joint" -> "no17_top_straw"
+"base_link" -> "no18_main_joint" [label="xyz: -0.191227 0.231154 0 \nrpy: 0 -0 0"]
+"no18_main_joint" -> "no18_bot_straw"
+"no18_bot_straw" -> "no18_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no18_slave_joint" -> "no18_top_straw"
+"base_link" -> "no19_main_joint" [label="xyz: -0.218691 0.205364 0 \nrpy: 0 -0 0"]
+"no19_main_joint" -> "no19_bot_straw"
+"no19_bot_straw" -> "no19_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no19_slave_joint" -> "no19_top_straw"
+"base_link" -> "no1_main_joint" [label="xyz: 0.297634 0.0376 0 \nrpy: 0 -0 0"]
+"no1_main_joint" -> "no1_bot_straw"
+"no1_bot_straw" -> "no1_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no1_slave_joint" -> "no1_top_straw"
+"base_link" -> "no20_main_joint" [label="xyz: -0.242705 0.176336 0 \nrpy: 0 -0 0"]
+"no20_main_joint" -> "no20_bot_straw"
+"no20_bot_straw" -> "no20_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no20_slave_joint" -> "no20_top_straw"
+"base_link" -> "no21_main_joint" [label="xyz: -0.262892 0.144526 0 \nrpy: 0 -0 0"]
+"no21_main_joint" -> "no21_bot_straw"
+"no21_bot_straw" -> "no21_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no21_slave_joint" -> "no21_top_straw"
+"base_link" -> "no22_main_joint" [label="xyz: -0.278933 0.110437 0 \nrpy: 0 -0 0"]
+"no22_main_joint" -> "no22_bot_straw"
+"no22_bot_straw" -> "no22_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no22_slave_joint" -> "no22_top_straw"
+"base_link" -> "no23_main_joint" [label="xyz: -0.290575 0.074607 0 \nrpy: 0 -0 0"]
+"no23_main_joint" -> "no23_bot_straw"
+"no23_bot_straw" -> "no23_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no23_slave_joint" -> "no23_top_straw"
+"base_link" -> "no24_main_joint" [label="xyz: -0.297634 0.0376 0 \nrpy: 0 -0 0"]
+"no24_main_joint" -> "no24_bot_straw"
+"no24_bot_straw" -> "no24_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no24_slave_joint" -> "no24_top_straw"
+"base_link" -> "no25_main_joint" [label="xyz: -0.3 -6.20469e-14 0 \nrpy: 0 -0 0"]
+"no25_main_joint" -> "no25_bot_straw"
+"no25_bot_straw" -> "no25_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no25_slave_joint" -> "no25_top_straw"
+"base_link" -> "no26_main_joint" [label="xyz: -0.297634 -0.0376 0 \nrpy: 0 -0 0"]
+"no26_main_joint" -> "no26_bot_straw"
+"no26_bot_straw" -> "no26_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no26_slave_joint" -> "no26_top_straw"
+"base_link" -> "no27_main_joint" [label="xyz: -0.290575 -0.074607 0 \nrpy: 0 -0 0"]
+"no27_main_joint" -> "no27_bot_straw"
+"no27_bot_straw" -> "no27_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no27_slave_joint" -> "no27_top_straw"
+"base_link" -> "no28_main_joint" [label="xyz: -0.278933 -0.110437 0 \nrpy: 0 -0 0"]
+"no28_main_joint" -> "no28_bot_straw"
+"no28_bot_straw" -> "no28_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no28_slave_joint" -> "no28_top_straw"
+"base_link" -> "no29_main_joint" [label="xyz: -0.262892 -0.144526 0 \nrpy: 0 -0 0"]
+"no29_main_joint" -> "no29_bot_straw"
+"no29_bot_straw" -> "no29_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no29_slave_joint" -> "no29_top_straw"
+"base_link" -> "no2_main_joint" [label="xyz: 0.290575 0.074607 0 \nrpy: 0 -0 0"]
+"no2_main_joint" -> "no2_bot_straw"
+"no2_bot_straw" -> "no2_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no2_slave_joint" -> "no2_top_straw"
+"base_link" -> "no30_main_joint" [label="xyz: -0.242705 -0.176336 0 \nrpy: 0 -0 0"]
+"no30_main_joint" -> "no30_bot_straw"
+"no30_bot_straw" -> "no30_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no30_slave_joint" -> "no30_top_straw"
+"base_link" -> "no31_main_joint" [label="xyz: -0.218691 -0.205364 0 \nrpy: 0 -0 0"]
+"no31_main_joint" -> "no31_bot_straw"
+"no31_bot_straw" -> "no31_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no31_slave_joint" -> "no31_top_straw"
+"base_link" -> "no32_main_joint" [label="xyz: -0.191227 -0.231154 0 \nrpy: 0 -0 0"]
+"no32_main_joint" -> "no32_bot_straw"
+"no32_bot_straw" -> "no32_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no32_slave_joint" -> "no32_top_straw"
+"base_link" -> "no33_main_joint" [label="xyz: -0.160748 -0.253298 0 \nrpy: 0 -0 0"]
+"no33_main_joint" -> "no33_bot_straw"
+"no33_bot_straw" -> "no33_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no33_slave_joint" -> "no33_top_straw"
+"base_link" -> "no34_main_joint" [label="xyz: -0.127734 -0.271448 0 \nrpy: 0 -0 0"]
+"no34_main_joint" -> "no34_bot_straw"
+"no34_bot_straw" -> "no34_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no34_slave_joint" -> "no34_top_straw"
+"base_link" -> "no35_main_joint" [label="xyz: -0.0927051 -0.285317 0 \nrpy: 0 -0 0"]
+"no35_main_joint" -> "no35_bot_straw"
+"no35_bot_straw" -> "no35_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no35_slave_joint" -> "no35_top_straw"
+"base_link" -> "no36_main_joint" [label="xyz: -0.0562144 -0.294686 0 \nrpy: 0 -0 0"]
+"no36_main_joint" -> "no36_bot_straw"
+"no36_bot_straw" -> "no36_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no36_slave_joint" -> "no36_top_straw"
+"base_link" -> "no37_main_joint" [label="xyz: -0.0188372 -0.299408 0 \nrpy: 0 -0 0"]
+"no37_main_joint" -> "no37_bot_straw"
+"no37_bot_straw" -> "no37_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no37_slave_joint" -> "no37_top_straw"
+"base_link" -> "no38_main_joint" [label="xyz: 0.0188372 -0.299408 0 \nrpy: 0 -0 0"]
+"no38_main_joint" -> "no38_bot_straw"
+"no38_bot_straw" -> "no38_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no38_slave_joint" -> "no38_top_straw"
+"base_link" -> "no39_main_joint" [label="xyz: 0.0562144 -0.294686 0 \nrpy: 0 -0 0"]
+"no39_main_joint" -> "no39_bot_straw"
+"no39_bot_straw" -> "no39_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no39_slave_joint" -> "no39_top_straw"
+"base_link" -> "no3_main_joint" [label="xyz: 0.278933 0.110437 0 \nrpy: 0 -0 0"]
+"no3_main_joint" -> "no3_bot_straw"
+"no3_bot_straw" -> "no3_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no3_slave_joint" -> "no3_top_straw"
+"base_link" -> "no40_main_joint" [label="xyz: 0.0927051 -0.285317 0 \nrpy: 0 -0 0"]
+"no40_main_joint" -> "no40_bot_straw"
+"no40_bot_straw" -> "no40_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no40_slave_joint" -> "no40_top_straw"
+"base_link" -> "no41_main_joint" [label="xyz: 0.127734 -0.271448 0 \nrpy: 0 -0 0"]
+"no41_main_joint" -> "no41_bot_straw"
+"no41_bot_straw" -> "no41_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no41_slave_joint" -> "no41_top_straw"
+"base_link" -> "no42_main_joint" [label="xyz: 0.160748 -0.253298 0 \nrpy: 0 -0 0"]
+"no42_main_joint" -> "no42_bot_straw"
+"no42_bot_straw" -> "no42_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no42_slave_joint" -> "no42_top_straw"
+"base_link" -> "no43_main_joint" [label="xyz: 0.191227 -0.231154 0 \nrpy: 0 -0 0"]
+"no43_main_joint" -> "no43_bot_straw"
+"no43_bot_straw" -> "no43_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no43_slave_joint" -> "no43_top_straw"
+"base_link" -> "no44_main_joint" [label="xyz: 0.218691 -0.205364 0 \nrpy: 0 -0 0"]
+"no44_main_joint" -> "no44_bot_straw"
+"no44_bot_straw" -> "no44_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no44_slave_joint" -> "no44_top_straw"
+"base_link" -> "no45_main_joint" [label="xyz: 0.242705 -0.176336 0 \nrpy: 0 -0 0"]
+"no45_main_joint" -> "no45_bot_straw"
+"no45_bot_straw" -> "no45_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no45_slave_joint" -> "no45_top_straw"
+"base_link" -> "no46_main_joint" [label="xyz: 0.262892 -0.144526 0 \nrpy: 0 -0 0"]
+"no46_main_joint" -> "no46_bot_straw"
+"no46_bot_straw" -> "no46_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no46_slave_joint" -> "no46_top_straw"
+"base_link" -> "no47_main_joint" [label="xyz: 0.278933 -0.110437 0 \nrpy: 0 -0 0"]
+"no47_main_joint" -> "no47_bot_straw"
+"no47_bot_straw" -> "no47_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no47_slave_joint" -> "no47_top_straw"
+"base_link" -> "no48_main_joint" [label="xyz: 0.290575 -0.074607 0 \nrpy: 0 -0 0"]
+"no48_main_joint" -> "no48_bot_straw"
+"no48_bot_straw" -> "no48_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no48_slave_joint" -> "no48_top_straw"
+"base_link" -> "no49_main_joint" [label="xyz: 0.297634 -0.0376 0 \nrpy: 0 -0 0"]
+"no49_main_joint" -> "no49_bot_straw"
+"no49_bot_straw" -> "no49_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no49_slave_joint" -> "no49_top_straw"
+"base_link" -> "no4_main_joint" [label="xyz: 0.262892 0.144526 0 \nrpy: 0 -0 0"]
+"no4_main_joint" -> "no4_bot_straw"
+"no4_bot_straw" -> "no4_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no4_slave_joint" -> "no4_top_straw"
+"base_link" -> "no5_main_joint" [label="xyz: 0.242705 0.176336 0 \nrpy: 0 -0 0"]
+"no5_main_joint" -> "no5_bot_straw"
+"no5_bot_straw" -> "no5_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no5_slave_joint" -> "no5_top_straw"
+"base_link" -> "no6_main_joint" [label="xyz: 0.218691 0.205364 0 \nrpy: 0 -0 0"]
+"no6_main_joint" -> "no6_bot_straw"
+"no6_bot_straw" -> "no6_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no6_slave_joint" -> "no6_top_straw"
+"base_link" -> "no7_main_joint" [label="xyz: 0.191227 0.231154 0 \nrpy: 0 -0 0"]
+"no7_main_joint" -> "no7_bot_straw"
+"no7_bot_straw" -> "no7_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no7_slave_joint" -> "no7_top_straw"
+"base_link" -> "no8_main_joint" [label="xyz: 0.160748 0.253298 0 \nrpy: 0 -0 0"]
+"no8_main_joint" -> "no8_bot_straw"
+"no8_bot_straw" -> "no8_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no8_slave_joint" -> "no8_top_straw"
+"base_link" -> "no9_main_joint" [label="xyz: 0.127734 0.271448 0 \nrpy: 0 -0 0"]
+"no9_main_joint" -> "no9_bot_straw"
+"no9_bot_straw" -> "no9_slave_joint" [label="xyz: 0 0 0.3 \nrpy: 0 -0 0"]
+"no9_slave_joint" -> "no9_top_straw"
+}

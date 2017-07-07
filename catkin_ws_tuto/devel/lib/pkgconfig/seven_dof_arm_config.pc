@@ -1,0 +1,8 @@
+prefix=/home/ordi/catkin_ws/devel
+
+Name: seven_dof_arm_config
+Description: Description of seven_dof_arm_config
+Version: 0.2.0
+Cflags: 
+Libs: -L/home/ordi/catkin_ws/devel/lib 
+Requires: 

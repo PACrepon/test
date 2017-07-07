@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test_bot">
+
+	<xacro:property name = "main_body_radius" value = "0.2"/>
+	<xacro:property name = "main_body_length" value = "0.02"/>
+	<xacro:property name = "wheel_radius" value = "0.3"/>
+	<xacro:property name = "wheel_length" value = "0.05"/>
+
+	<xacro:property name = "pie" value = "3.14159265359"/>
+	<xacro:property name = "deg_to_rad" value = "${pie/180.}"/>
+
+	
+	<xacro:macro name = "wheel" params="name radius length">
+		<link name = "${name}">
+			<visual>
+				<geometry>
+					<cylinder length = "${length}" radius = "${radius}"/>
+				</geometry>
+				<origin rpy = "0 ${pie/2} 0"/>
+				<material name = "green">
+					<color rgba = "0 1 0 1"/>
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+	
+	<link name = "base_link">
+		<visual>
+			<geometry>
+				<sphere radius = "${main_body_radius}"/>
+			</geometry>
+			<origin rpy = "0 0 0"/>
+			<material name = "red">
+				<color rgba = "1 0 0 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<xacro:wheel name = "right_wheel" length = "${wheel_length}" radius = "${wheel_radius}"/>
+	<xacro:wheel name = "left_wheel" length = "${wheel_length}" radius = "${wheel_radius}"/>
+
+	
+
+	<joint name="left_joint" type="revolute">
+	    <parent link="base_link"/>
+	    <child link="left_wheel"/>
+	    <origin xyz="${main_body_radius + wheel_length/2} 0 0"/>
+	    <axis xyz="1 0 0" />
+	    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+	    <dynamics damping="50" friction="1"/>
+	</joint>
+
+	<joint name="right_joint" type="revolute">
+	    <parent link="base_link"/>
+	    <child link="right_wheel"/>
+	    <origin xyz="${-(main_body_radius + wheel_length/2)} 0 0"/>
+	    <axis xyz="-1 0 0" />
+	    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+	    <dynamics damping="50" friction="1"/>
+	</joint>
+
+	
+</robot>

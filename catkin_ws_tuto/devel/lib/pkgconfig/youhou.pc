@@ -1,0 +1,8 @@
+prefix=/home/ordi/catkin_ws/devel
+
+Name: youhou
+Description: Description of youhou
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/ordi/catkin_ws/devel/lib 
+Requires: 

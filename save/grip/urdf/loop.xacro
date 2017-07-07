@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test_bot">
+
+	
+	<xacro:property name = "m_radius" value = "0.02"/>
+	<xacro:property name = "m_length" value = "0.3"/>
+
+	<xacro:property name = "pie" value = "3.14159265359"/>
+	<xacro:property name = "deg_to_rad" value = "${pie/180.}"/>
+
+	
+	<xacro:macro name = "straw" params="name radius length theta">
+		<link name = "${name}">
+			<visual>
+				<geometry>
+					<cylinder length = "${length}" radius = "${radius}"/>
+				</geometry>
+				<origin rpy = "${theta} 0 0"/>
+				<material name = "red">
+					<color rgba = "1 0 0 1"/>
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+	<xacro:straw name = "base_link" radius = "${m_radius}" length = "${m_length}" theta = "0"/>
+	<xacro:straw name = "no_1" radius = "${m_radius}" length = "${m_length}" theta = "${pie/2}"/>
+	<xacro:straw name = "no_2" radius = "${m_radius}" length = "${m_length}" theta = "${pie}"/>
+	<xacro:straw name = "no_3" radius = "${m_radius}" length = "${m_length}" theta = "${3*pie/2}"/>
+	<xacro:macro name = "jointure" params = "name link1 link2">
+		<joint name="${name}" type="revolute">
+		    <parent link = "${link1}"/>
+		    <child link = "${link2}"/>
+		    <origin xyz = "0 ${m_length} 0"/>
+		    <axis xyz ="0 0 1" />
+		    <limit effort="300" velocity="0.1" lower="${-pie/2}" upper="0"/>
+		    <dynamics damping="50" friction="1"/>
+		</joint>
+	</xacro:macro>
+
+	<xacro:jointure name = "joint1" link1 = "base_link" link2="no_1"/>
+	<xacro:jointure name = "joint2" link1 = "no_1" link2="no_2"/>
+	<xacro:jointure name = "joint3" link1 = "no_2" link2="no_3"/>
+	<xacro:jointure name = "joint_omega" link1 = "no_3" link2="base_link"/> 
+</robot>

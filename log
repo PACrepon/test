@@ -1,0 +1,38 @@
+-> Lundi : 03/07/2017
+	-> installation linux
+	-> installation ros
+	-> utilisation des topics / subscribers / publishers
+	-> utilisation de urdf / xacro / gazebo
+	-> application sur le robot "aspirateur" ou diff wheeled robot
+
+-> Mardi : 04/07/2017
+	-> manipulation de modele urdf avec rviz
+	-> creation de la structure de pince
+		-> les macros peuvent être utiliser recursivement => on peut faire des boucles
+
+-> Mercredi : 04/07/2017
+	-> cycle ? 
+		-> non ...
+	-> insertion de moteur sur une pince a 5 doigts (voir page 76)
+		-> raté
+	-> essai sur le robot aspiro
+		-> pas de planification de trajectoire
+
+-> Jeudi : 04/07/2017
+	-> essai sur le robot aspiro
+		-> YAY plnification de trajectoire (amcl)
+		-> essai sur ompl a faire (rrt)
+		-> aspiro bloqué -> essai sur une autre carte (vide)
+		-> si environnement etroit, algo de planification de trajectoire inadequat
+	->IMpletmentation des algos ompl dans nav_core
+
+-> Vendredi : 04/07/2017
+	->
+
+-> Samedi : 04/07/2017
+	->
+
+-> Dimanche : 04/07/2017
+	->
+
+target_link_libraries(ompl_global_planner_lib ${catkin_LIBRARIES})

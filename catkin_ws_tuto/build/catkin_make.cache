@@ -1,0 +1,2 @@
+diff_wheeled_robot_control:diff_wheeled_robot_gazebo:mastering_ros_robot_description_pkg:move-base-ompl
+-DCATKIN_DEVEL_PREFIX=/home/ordi/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ordi/catkin_ws/install -G Unix Makefiles
