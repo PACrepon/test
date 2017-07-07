@@ -10,7 +10,7 @@
 	-> creation de la structure de pince
 		-> les macros peuvent être utiliser recursivement => on peut faire des boucles
 
--> Mercredi : 04/07/2017
+-> Mercredi : 05/07/2017
 	-> cycle ? 
 		-> non ...
 	-> insertion de moteur sur une pince a 5 doigts (voir page 76)
@@ -18,7 +18,7 @@
 	-> essai sur le robot aspiro
 		-> pas de planification de trajectoire
 
--> Jeudi : 04/07/2017
+-> Jeudi : 06/07/2017
 	-> essai sur le robot aspiro
 		-> YAY plnification de trajectoire (amcl)
 		-> essai sur ompl a faire (rrt)
@@ -26,13 +26,24 @@
 		-> si environnement etroit, algo de planification de trajectoire inadequat
 	->IMpletmentation des algos ompl dans nav_core
 
--> Vendredi : 04/07/2017
+-> Vendredi : 07/07/2017
+	-> Sauvegarde des fichiers réalisés pendant le tuto sur le git
+		-> git perso (pblm avec git ensta)
+	-> Creation de carte pour le robot aspiro
+	-> RRT* ne semble pas fonctionner bien (pas de ligne droite ... )
+
+-> Lundi : 10/07/2017
 	->
 
--> Samedi : 04/07/2017
+-> Mardi : 11/07/2017
 	->
 
--> Dimanche : 04/07/2017
+-> Mercredi : 12/07/2017
 	->
 
-target_link_libraries(ompl_global_planner_lib ${catkin_LIBRARIES})
+-> Jeudi : 13/07/2017
+	->
+
+-> Vendredi : 14/07/2017
+	->
+
