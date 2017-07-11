@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test_bot">
+
+	<xacro:property name = "main_body_radius" value = "1"/>
+	<xacro:property name = "main_body_length" value = "0.02"/>
+	<xacro:property name = "wheel_radius" value = "0.02"/>
+	<xacro:property name = "wheel_length" value = "0.3"/>
+
+	<xacro:property name = "pie" value = "3.14159265359"/>
+	<xacro:property name = "deg_to_rad" value = "${pie/180.}"/>
+
+	
+	<xacro:macro name = "straw" params="name radius length offsetr">
+		<link name = "${name}">
+			<visual>
+				<geometry>
+					<cylinder length = "${length}" radius = "${radius}"/>
+				</geometry>
+				<origin rpy = "0 0 0" 
+					xyz = "0 0 ${length/2.}"/>
+				<material name = "green">
+					<color rgba = "0 1 0 1"/>
+				</material>
+			</visual>
+		</link>
+	</xacro:macro>
+	
+	
+	<link name = "base_link">
+		<visual>
+			<geometry>
+				<cylinder length = "${main_body_length}" radius = "${main_body_radius}"/>
+			</geometry>
+			<origin rpy = "0 0 0"/>
+			<material name = "red">
+				<color rgba = "1 0 0 1"/>
+			</material>
+		</visual>
+	</link>
+
+	<xacro:macro name = "master_finger" params="name radius length offsetr theta">
+		<xacro:straw name = "${name + '_bot_straw'}" length = "${length}" radius = "${radius}" offsetr="${offsetr}"/>
+		<xacro:straw name = "${name + '_top_straw'}" length = "${length}" radius = "${radius}" offsetr="${offsetr}"/>
+
+
+		<joint name="${name + '_main_joint'}" type="revolute">
+		    <parent link="base_link"/>
+		    <child link="${name + '_bot_straw'}"/>
+		    <origin xyz="${cos(theta)*offsetr} ${sin(theta)*offsetr} 0"/>
+		    <axis xyz="${sin(theta)*offsetr} ${-cos(theta)*offsetr} 0" />
+		    <limit effort="300" velocity="0.1" lower="${-pie/2}" upper="0"/>
+		    <dynamics damping="50" friction="1"/>
+		</joint>
+		
+		<joint name="${name + '_slave_joint'}" type="revolute">
+		    <parent link="${name + '_bot_straw'}"/>
+		    <child link="${name + '_top_straw'}"/>
+		    <origin xyz="0 0 ${length}"/>
+		    <axis xyz="${sin(theta)*offsetr} ${-cos(theta)*offsetr} 0" />
+		    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+		    <mimic joint="${name + '_main_joint'}" multiplier="-2.0" offset="0.0"/>
+		    <dynamics damping="50" friction="1"/>
+		</joint>
+
+	</xacro:macro>
+
+	<xacro:macro name = "slave_finger" params="name master radius length offsetr theta">
+		<xacro:straw name = "${name + '_bot_straw'}" length = "${length}" radius = "${radius}" offsetr="${offsetr}"/>
+		<xacro:straw name = "${name + '_top_straw'}" length = "${length}" radius = "${radius}" offsetr="${offsetr}"/>
+
+
+		<joint name="${name + '_main_joint'}" type="revolute">
+		    <parent link="base_link"/>
+		    <child link="${name + '_bot_straw'}"/>
+		    <origin xyz="${cos(theta)*offsetr} ${sin(theta)*offsetr} 0"/>
+		    <axis xyz="${sin(theta)*offsetr} ${-cos(theta)*offsetr} 0" />
+		    <limit effort="300" velocity="0.1" lower="${-pie/2}" upper="0"/>
+		    <mimic joint="${master}" multiplier="1.0" offset="0.0"/>
+		    <dynamics damping="50" friction="1"/>
+		</joint>
+		
+		<joint name="${name + '_slave_joint'}" type="revolute">
+		    <parent link="${name + '_bot_straw'}"/>
+		    <child link="${name + '_top_straw'}"/>
+		    <origin xyz="0 0 ${length}"/>
+		    <axis xyz="${sin(theta)*offsetr} ${-cos(theta)*offsetr} 0" />
+		    <limit effort="300" velocity="0.1" lower="${-pie}" upper="${pie}"/>
+		    <mimic joint="${name + '_main_joint'}" multiplier="-2.0" offset="0.0"/>
+		    <dynamics damping="50" friction="1"/>
+		</joint>
+	</xacro:macro>
+
+	<xacro:macro name = "slave_fingers" params="counter counter_max master radius length offsetr">
+		<xacro:if value="${counter != counter_max }">
+			<xacro:slave_finger name = "${'no'+ str(counter)}" master = "${master}" radius = "${radius}" length = "${length}" offsetr = "${offsetr}" theta = "${2*pie*counter/counter_max}"/>
+			<xacro:slave_fingers counter = "${counter+1}" counter_max="${counter_max}" master="${master}" radius="${radius}" length="${length}" offsetr="${offsetr}"/>
+		</xacro:if>
+	</xacro:macro>
+
+	<xacro:master_finger name = "master" radius = "${wheel_radius}" length = "${wheel_length}" offsetr = "0.1" theta="0"/>
+	<xacro:slave_fingers counter="1" counter_max = "100" master = "master_main_joint" radius = "${wheel_radius}" length = "${wheel_length}" offsetr = "0.1"/>
+	
+</robot>

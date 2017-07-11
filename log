@@ -31,6 +31,8 @@
 		-> git perso (pblm avec git ensta)
 	-> Creation de carte pour le robot aspiro
 	-> RRT* ne semble pas fonctionner bien (pas de ligne droite ... )
+	-> probleme de parametrisation de RRT*
+		-> il genere l'arbre en continue  => pas de trajectoire stable/optimale
 
 -> Lundi : 10/07/2017
 	->

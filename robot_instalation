@@ -1,0 +1,62 @@
+-> installer la camera
+	-> installer le module usb_cam
+		-> cd catkin_ws/src
+		-> git clone https://www.github.com/ros-drivers/usb_cam.git
+		-> cd .. 
+		-> catkin_make
+	-> installer le module image_view
+		->sudo pat-get install ros-kinetic-image-view
+		->sudo apt-get install v4l-utils
+	-> installer camera-calibration
+		-> sudo apt-get install ros-kinetic-camera-calibration
+	-> installer track-alvar 
+		-> sudo apt-get install ros-kinetic-ar-track-alvar
+
+-> calibrer la camera
+	-> cd catkin_ws/src
+	-> rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.108 image:=/usb_cam/image camera:=/usb_cam
+	-> suivre les instructions
+
+
+
+-> installer arduino 
+	-> installer arduino
+		-> sudo apt-get install arduino
+		-> lancer arduino
+	-> installer rosserial 
+		-> sudo apt-get install ros-kinetic-rosserial ros-kinetic-rosserial-arduino ros-kinetic-rosserial-xbee
+		-> cd catkin_ws/src https://github.com/ros-drivers/rosserial.git
+		-> cd ..
+		-> catkin_make
+		-> cd ~/sketchbook/librairies
+		-> rm -rf ros_lib
+		-> rosrun rosserial_arduino make_librairies.py
+	-> connexion liaison serial 
+		-> rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+
+-> installation du xbee
+	-> branchez 
+	-> ouvrir arduino
+	-> Ctrl + shift + m 
+	-> regler sur 57600 baud
+	-> no line ending -> +++ (appuyer sur send pas ENTER)
+		-> carriage return -> ATID - ATSH - ATSL - ATDH - ATDL
+		-> refaire +++ is le tps est ecoulé (rapidement)
+
+
+
+ATID -> 11
+ATSH -> 13A200
+ATSL -> 408C5916
+ATDH -> 13A200
+ATDL -> 40C36490
+
+ATID -> 11
+ATSH -> 13A200
+ATSL -> 40C36490
+ATDH -> 13A200
+ATDL -> 408C5916
+
+
+ 

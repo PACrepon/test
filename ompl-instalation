@@ -1,0 +1,14 @@
+-> installer ompl 
+	-> sudo apt-get install ros-kinetic-ompl
+-> installer nav
+	-> sudo apt-get install ros-kinetic-navigation
+-> integrer les planneurs ompl à navigation
+	-> cd ~/catkin_ws/src
+	-> git clone https://github.com/windelbouwman/move-base-ompl.git
+	-> cd ..
+	-> catkin_make
+
+-> Choix du planneur ompl
+	-> editer ~/catkin_ws/src/move_base_ompl/src/ompl_global_planner.cpp
+	-> commenter toutes les lignes l.310 -> 315
+	-> decommenter la ligne du planneur souhaité ( 310 -> LBTRRT ; 311 -> RRTConnect ; 312 -> RRT* ; 313 -> PRM* ; 315 -> TRRT)
